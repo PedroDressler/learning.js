@@ -1,0 +1,65 @@
+:root{
+  --btnHeight: 4px;
+  --background: #1b1f22;
+  --text: #ececec;
+}
+
+body {
+  padding: 10px;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.country-container {
+  display: flex;
+}
+
+.country {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.add, .remove{
+  color: var(--text);
+  font-weight: bold;
+  font-size: 13pt;
+  width: 40px;
+  height: 30px;
+  border: 0;
+  border-bottom: var(--btnHeight) solid;
+}
+
+.add {
+  background-color: seagreen;
+  border-color:  rgb(38, 218, 149);
+}
+
+.remove{
+  background-color: darkred;
+  border-color: rgb(230, 0, 0);
+}
+
+.add:hover, .remove:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.add:active, .remove:active{
+  border: 0;
+  height: calc(30px - var(--btnHeight));
+}
+
+.country-list {
+  padding: 5px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  margin-right: 10px;
+}
