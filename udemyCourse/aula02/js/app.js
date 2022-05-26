@@ -7,10 +7,9 @@ axios('./pessoas.json').then(res => loadHtml(res.data))
 
 function loadHtml(json){
   const result = document.querySelector('.resultado');
-  let i = 1;
   for(pessoa of json){
     result.innerHTML +=`<ul>
-                          <li>${i} - ${pessoa.nome}</li>
+                          <li>${pessoa + 1} - ${pessoa.nome}</li>
                           <ul>
                             <li>Idade: ${pessoa.idade}</li>
                             <li>Sexo: ${pessoa.sexo}</li>

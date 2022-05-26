@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "core-js": "^3.22.7",
-    "regenerator-runtime": "^0.13.9"
+    "css-loader": "^6.7.1",
+    "regenerator-runtime": "^0.13.9",
+    "style-loader": "^3.3.1"
   }
 }

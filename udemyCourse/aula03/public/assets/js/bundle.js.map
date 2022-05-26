@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle.js","mappings":";;;;;AAAAA,OAAO,CAACC,GAAR,CAAY,QAAZ,E","sources":["webpack://aula03/./src/index.js"],"sourcesContent":["console.log('Fodase')"],"names":["console","log"],"sourceRoot":""}
