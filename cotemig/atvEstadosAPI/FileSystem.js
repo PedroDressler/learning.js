@@ -1,24 +1,18 @@
-import { promises as fs } from 'fs';
-
-var estados, cidades;
+import { existsSync, promises as fs } from 'fs';
 
 export async function rFile() {
-  estados = await fs.readFile('./json-all/Estados.json');
-  estados = await JSON.parse(estados);
-  // console.log(estados);
-  cidades = await fs.readFile('./json-all/Cidades.json');
-  cidades = await JSON.parse(cidades);
+  var estados = await fs.readFile('./json-all/Estados.json');
+  estados = JSON.parse(estados);
+  console.log(estados);
+
+  var cidades = await fs.readFile('./json-all/Cidades.json');
+  cidades = JSON.parse(cidades);
   // console.log(cidades);
-}
-
-export async function wFile() {
-  returnUF();
-}
-
-async function returnUF() {
-  await fs.mkdir('./json-uf', { recursive: true }); // Fazer a pasta json-uf caso não esteja criada
-  for(var i in estados){
-    const uf = await cidades.filter(cidade => {cidade.Estado == i.ID})
-    await fs.writeFile(`./json-uf/${estados[i].Sigla}`, JSON.stringify(uf));
+  if (!existsSync('./json-uf')) {
+    await fs.mkdir('./json-uf', { recursive: true });
+  }
+  for (var i of estados) {
+    const UF = cidades.filter(cidade => cidade.Estado == i.ID);
+    await fs.writeFile(`./json-uf/${i.Sigla}.json`, JSON.stringify(UF))
   }
 }
