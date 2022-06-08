@@ -1,4 +1,3 @@
-import {rFile, wFile} from './FileSystem.js'
+import { rFile } from './FileSystem.js'
 
 rFile();
-wFile();
