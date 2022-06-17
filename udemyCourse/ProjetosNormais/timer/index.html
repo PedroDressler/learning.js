@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timer</title>
+</head>
+
+<body>
+  <header>
+    <div class="flex-container">
+      <img src="./assets/logo.svg" alt="Logo" class="logo">
+    </div>
+  </header>
+  <main>
+    <div class="flex-container container">
+      <ul class="timer-list">
+        <li>
+          <h1>Relógio</h1>
+        </li>
+        <li id="timer" class="timer disabled">00:00:00</li>
+        <li class="buttons">
+          <button id="iniciar">Iniciar</button>
+          <button id="pausar" class="disable">Pausar</button>
+          <button id="zerar" class="disable">Zerar</button>
+        </li>
+        <li><input type="button" id="add" hidden></li>
+      </ul>
+    </div>
+    <div class="flex-container container">
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Checkpoint</th>
+          </tr>
+        </thead>
+        <tbody id="table">
+        </tbody>
+      </table>
+    </div>
+  </main>
+  <script src="./js/timer.js"></script>
+</body>
+
+</html>
